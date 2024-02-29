@@ -37781,7 +37781,7 @@
 					children: (0, r.jsx)(Gr, {
 						className: "mb-5 flex",
 						onClick: function() {
-							e.push("/farms")
+							e.push("https://slinkydoge.xyz")
 						},
 						children: new Array(2 * Math.ceil(window.innerWidth / 630)).fill(1).map((function() {
 							return (0, r.jsx)($r, {}, Date.now() + Math.random())
