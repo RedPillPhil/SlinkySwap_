@@ -1031,7 +1031,7 @@
 			}
 
 			function tn() {
-    		var e = en(["\n  background: url('/images/bg.png');\n  background-repeat: no-repeat;\n  background-size: 120%;\n  background-position: center;\n"]);
+    		var e = en(["\n  background: url('/images/bg.png');\n  background-repeat: no-repeat;\n  background-size: 180%;\n  background-position: center;\n"]);
     		return tn = function() {
         		return e;
 				}, e
