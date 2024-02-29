@@ -32448,7 +32448,7 @@
 					wbtc: new r.WU(42170, "0x1d05e4e72cD994cdF976181CfB0707345763564d", 8, "WBTC", "Wrapped BTC", ""),
 					moon: new r.WU(42170, "0x0057Ac2d777797d31CD3f8f13bF5e927571D6Ad0", 18, "MOON", "Moons", ""),
 					bricks: new r.WU(42170, "0x6dcb98f460457fe4952e12779ba852f82ecc62c1", 18, "BRICK", "Bricks", ""),
-					arbs: new r.WU(42170, "0x898531B625D5F2CF57De991E690dD23Bb4367DFa", 18, "ARBS", "Arbswap Token", "")
+					arbs: new r.WU(42170, "0xF832cA45a6316F0a4447b861f36De8FFa2B06D82", 6, "SLINKY", "Slinky Doge", "")
 				},
 				s = {
 					weth: new r.WU(42161, "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1", 18, "WETH", "Wrapped Ether", "https://weth.io/"),
@@ -32457,7 +32457,7 @@
 					wstETH: new r.WU(42161, "0x5979D7b546E38E414F7E9822514be443A4800529", 18, "wstETH", "Wrapped liquid staked Ether 2.0", "https://lido.fi/"),
 					usdt: new r.WU(42161, "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9", 6, "USDT", "Tether USD", "https://tether.to/"),
 					arb: new r.WU(42161, "0x912CE59144191C1204E64559FE8253a0e49E6548", 18, "ARB", "Arbitrum", "https://arbitrum.foundation/"),
-					arbs: new r.WU(42161, "0xf50874f8246776CA4B89eEF471E718F70f38458F", 18, "ARBS", "Arbswap Token", ""),
+					arbs: new r.WU(42161, "0xF832cA45a6316F0a4447b861f36De8FFa2B06D82", 6, "SLINKY", "Slinky Doge", ""),
 					usdcn: new r.WU(42161, "0xaf88d065e77c8cC2239327C5EDb3A432268e5831", 6, "USDC", "USD Coin", "https://www.centre.io/"),
 					frxETH: new r.WU(42161, "0x178412e79c25968a32e89b11f63B33F733770c2A", 18, "frxETH", "Frax Ether", "https://app.frax.finance/"),
 					frax: new r.WU(42161, "0x17FC002b466eEc40DaE837Fc4bE5c67993ddBd6F", 18, "FRAX", "Frax", "https://frax.finance/")
@@ -32466,7 +32466,7 @@
 					weth: new r.WU(421613, "0xEe01c0CD76354C383B8c7B4e65EA88D00B06f36f", 18, "WETH", "Wrapped Ether", "https://weth.io/"),
 					usdc: new r.WU(421613, "0x8192dA45b932EFDc56dee24aC205d6Bcf209AA73", 18, "USDC", "Test USDC", "https://www.circle.com/en/usdc"),
 					dai: new r.WU(421613, "0x8FA6547A65B1640eBa80880BF29f21B886636113", 18, "DAI", "Dai Stablecoin", "https://makerdao.com/en/"),
-					arbs: new r.WU(421613, "0xbe737d08Fb505AD45e08a89Ac7FDA9791f025bF2", 18, "ARBS", "Arbswap Token", "")
+					arbs: new r.WU(421613, "0xF832cA45a6316F0a4447b861f36De8FFa2B06D82", 6, "SLINKY", "Slinky Doge", "")
 				},
 				c = {
 					421613: u,
