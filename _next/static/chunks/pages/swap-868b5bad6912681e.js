@@ -1031,9 +1031,9 @@
 			}
 
 			function tn() {
-				var e = en(["\n  background: url('/images/bg.png');\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-position: right;\n"]);
-				return tn = function() {
-					return e
+    		var e = en(["\n  background: url('/images/bg.png');\n  background-repeat: no-repeat;\n  background-size: 120%;\n  background-position: center;\n"]);
+    		return tn = function() {
+        		return e;
 				}, e
 			}
 			var rn = (0, i.ZP)(d.Z).withConfig({
