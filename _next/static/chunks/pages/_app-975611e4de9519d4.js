@@ -32166,16 +32166,7 @@
 					isStableLp: !1,
 					isFlexible: !0
 				}],
-				s = [{
-					pid: 6,
-					lpSymbol: "FRAX/USDC",
-					lpAddress: "0xb05CFFF3748B778023BdD83CafC1d66808a909C4",
-					stableSwapAddress: "0x3c3d5d32c7b0c61aab03177da5cf1360aa43d0aa",
-					token: o.fi.frax,
-					quoteToken: o.fi.usdcn,
-					isStableLp: !0,
-					isFlexible: !0
-				}, {
+				s = [ {
 					pid: 5,
 					lpSymbol: "frxETH/WETH",
 					lpAddress: "0xd7F3187A58F81Ee965D80F4686c466B9ef25010A",
@@ -32183,14 +32174,6 @@
 					token: o.fi.frxETH,
 					quoteToken: o.fi.weth,
 					isStableLp: !0,
-					isFlexible: !0
-				}, {
-					pid: 4,
-					lpSymbol: "ETH/USDC",
-					lpAddress: "0xbE0a388ae4819044849aCa624e9e6c552FE10d8A",
-					token: o.fi.usdcn,
-					quoteToken: o.fi.weth,
-					isStableLp: !1,
 					isFlexible: !0
 				}, {
 					pid: 0,
@@ -32300,33 +32283,6 @@
 					infoStableSwapAddress: "0xaA50d30612A58f2e7935C4482Fa426B0Aa770d7f",
 					stableLpFee: 2e-4,
 					stableLpFeeRateOfTotalFee: .5
-				}, {
-					lpSymbol: "wstETH-WETH LP",
-					lpAddress: "0x7Ed231f5e6462E008497087a5e8f8ae437256966",
-					token: o.TV[i.a_.ONE].wstETH,
-					quoteToken: o.TV[i.a_.ONE].weth,
-					stableSwapAddress: "0xE7dE07F541EBeCcA39aB65CA2203bc54B7107353",
-					infoStableSwapAddress: "0xaA50d30612A58f2e7935C4482Fa426B0Aa770d7f",
-					stableLpFee: 2e-4,
-					stableLpFeeRateOfTotalFee: .5
-				}, {
-					lpSymbol: "FRAX-USDC LP",
-					lpAddress: "0xb05CFFF3748B778023BdD83CafC1d66808a909C4",
-					token: o.TV[i.a_.ONE].frax,
-					quoteToken: o.TV[i.a_.ONE].usdcn,
-					stableSwapAddress: "0x3c3d5d32c7b0c61aab03177da5cf1360aa43d0aa",
-					infoStableSwapAddress: "0xaA50d30612A58f2e7935C4482Fa426B0Aa770d7f",
-					stableLpFee: 2e-4,
-					stableLpFeeRateOfTotalFee: .5
-				}, {
-					lpSymbol: "frxETH-WETH LP",
-					lpAddress: "0xd7F3187A58F81Ee965D80F4686c466B9ef25010A",
-					token: o.TV[i.a_.ONE].frxETH,
-					quoteToken: o.TV[i.a_.ONE].weth,
-					stableSwapAddress: "0x0c00a7a12d2c118212c871e3b52736478fe282a6",
-					infoStableSwapAddress: "0xaA50d30612A58f2e7935C4482Fa426B0Aa770d7f",
-					stableLpFee: 2e-4,
-					stableLpFeeRateOfTotalFee: .5
 				}]), s),
 				l = [i.a_.ONE, i.a_.MAINNET]
 		},
@@ -32388,6 +32344,8 @@
 				},
 				s = {
 					weth: new r.WU(42161, "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1", 18, "WETH", "Wrapped Ether", "https://weth.io/"),
+					dai: new r.WU(42163, "0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1", 18, "DAI", "Dai Stablecoin", "https://makerdao.com/en/"),
+					usdc: new r.WU(42163, "0xFF970A61A04b1cA14834A43f5dE4533eBDDB5CC8", 6, "USDC.e", "Bridged USDC", "https://arbitrum.foundation/"),
 					usdt: new r.WU(42161, "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9", 6, "USDT", "Tether USD", "https://tether.to/"),
 					arbs: new r.WU(42161, "0xF832cA45a6316F0a4447b861f36De8FFa2B06D82", 6, "SLINKY", "Slinky Doge", "")
 				},
