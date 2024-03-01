@@ -37230,43 +37230,24 @@
 					return n
 				}, n
 			}
-			var lr = (0, i.ZP)("a").withConfig({
+var lr = (0, i.ZP)("a").withConfig({
     componentId: "sc-b49fe976-0"
 })(cr());
 
 var fr = function(e) {
-    var imageUrl = "https://github.com/RedPillPhil/SlinkySwap_/blob/main/slinkyswap.png?raw=true"; // Replace with the URL of your image
-    var linkUrl = ""; // Assuming the URL is passed as a prop to the component
-    var linkComponent = (0, d.useContext)(Ot).linkComponent;
+    var t = null;
+    var n = null;
+},
 
-    return (
-        (0, r.jsx)(linkComponent, {
-            href: linkUrl,
-            children: (0, r.jsx)("img", {
-                src: imageUrl,
-                alt: "Alternative Text for Image", // Add appropriate alt text for accessibility
-                "aria-label": "Arbswap home page", // Optional aria-label for accessibility
-                style: {
-                    position: "fixed",
-                    top: "7px", // Adjust the top position as per your requirement
-                    right: "1400px", // Adjust the left position as per your requirement
-                    width: "100px",
-                    height: "50px"
-                }
-            })
-        })
-    );
-};
+				dr = d.memo(fr),
+				pr = n(50308),
+				hr = n.n(pr);
 
-var dr = d.memo(fr);
-var pr = n(50308);
-var hr = n.n(pr);
-
-function mr(e, t, n) {
-    return t in e ? Object.defineProperty(e, t, {
-        value: n,
-        enumerable: !0,
-        configurable: !0,
+			function mr(e, t, n) {
+				return t in e ? Object.defineProperty(e, t, {
+					value: n,
+					enumerable: !0,
+					configurable: !0,
 					writable: !0
 				}) : e[t] = n, e
 			}
