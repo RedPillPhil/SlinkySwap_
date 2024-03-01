@@ -32345,7 +32345,7 @@
 				s = {
 					weth: new r.WU(42161, "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1", 18, "WETH", "Wrapped Ether", "https://weth.io/"),
 					usdt: new r.WU(42161, "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9", 6, "USDT", "Tether USD", "https://tether.to/"),
-					BSMART: new r.WU(42161, "0x3419875B4D3Bca7F3FddA2dB7a476A79fD31B4fE", 9, "BSMART", "Bitcoin Smart", "https://tether.to/"),
+					bsmart: new r.WU(42161, "0x3419875B4D3Bca7F3FddA2dB7a476A79fD31B4fE", 9, "BSMART", "Bitcoin Smart", "https://tether.to/"),
 					arbs: new r.WU(42161, "0xF832cA45a6316F0a4447b861f36De8FFa2B06D82", 6, "SLINKY", "Slinky Doge", "")
 				},
 				u = {
