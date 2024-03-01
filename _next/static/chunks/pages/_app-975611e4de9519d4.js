@@ -32268,8 +32268,8 @@
 				c = (a(s = {}, i.a_.MAINNET, [{
 					lpSymbol: "USDC-DAI LP",
 					lpAddress: "0x46bFBBaE671aCae4724B3CA9548A11cDbE9c063D",
-					token: o.TV[i.a_.MAINNET].usdc,
-					quoteToken: o.TV[i.a_.MAINNET].dai,
+					token: o.TV[i.a_.MAINNET].arbs,
+					quoteToken: o.TV[i.a_.MAINNET].weth,
 					stableSwapAddress: "0xF23349346a2898ffb29E4EDe725CC223Ded09E75",
 					infoStableSwapAddress: "0x52d44Bb3Eb9f13Da839ebDA8393b8a783d161D48",
 					stableLpFee: 2e-4,
@@ -32278,7 +32278,7 @@
 					lpSymbol: "USDT-USDC LP",
 					lpAddress: "0xC371b81D1Ae1FBED41f011507CeAC3CfA5877e97",
 					token: o.TV[i.a_.ONE].usdt,
-					quoteToken: o.TV[i.a_.ONE].usdc,
+					quoteToken: o.TV[i.a_.ONE].arbs,
 					stableSwapAddress: "0xE97Af01c48C0A332C06A92dF36b77B2A680AB54B",
 					infoStableSwapAddress: "0xaA50d30612A58f2e7935C4482Fa426B0Aa770d7f",
 					stableLpFee: 2e-4,
@@ -32344,8 +32344,6 @@
 				},
 				s = {
 					weth: new r.WU(42161, "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1", 18, "WETH", "Wrapped Ether", "https://weth.io/"),
-					dai: new r.WU(42163, "0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1", 18, "DAI", "Dai Stablecoin", "https://makerdao.com/en/"),
-					usdc: new r.WU(42163, "0xFF970A61A04b1cA14834A43f5dE4533eBDDB5CC8", 6, "USDC.e", "Bridged USDC", "https://arbitrum.foundation/"),
 					usdt: new r.WU(42161, "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9", 6, "USDT", "Tether USD", "https://tether.to/"),
 					arbs: new r.WU(42161, "0xF832cA45a6316F0a4447b861f36De8FFa2B06D82", 6, "SLINKY", "Slinky Doge", "")
 				},
