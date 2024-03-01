@@ -32178,9 +32178,9 @@
 				}, {
 					pid: 0,
 					lpSymbol: "ARBS/ETH",
-					lpAddress: "0x62Ac1705d1577aE6e4dA1634ED571Fef78ceC3F9",
-					token: o.fi.arbs,
-					quoteToken: o.fi.weth,
+					lpAddress: "0x90a865d351E10a1C52Fdb620d1918eB6505B4CBF",
+					token: o.fi.slinky,
+					quoteToken: o.fi.usdt,
 					isStableLp: !1
 				}, {
 					pid: 1,
@@ -32268,7 +32268,7 @@
 				c = (a(s = {}, i.a_.MAINNET, [{
 					lpSymbol: "USDC-DAI LP",
 					lpAddress: "0x46bFBBaE671aCae4724B3CA9548A11cDbE9c063D",
-					token: o.TV[i.a_.MAINNET].arbs,
+					token: o.TV[i.a_.MAINNET].moon,
 					quoteToken: o.TV[i.a_.MAINNET].weth,
 					stableSwapAddress: "0xF23349346a2898ffb29E4EDe725CC223Ded09E75",
 					infoStableSwapAddress: "0x52d44Bb3Eb9f13Da839ebDA8393b8a783d161D48",
@@ -32278,7 +32278,7 @@
 					lpSymbol: "USDT-USDC LP",
 					lpAddress: "0xC371b81D1Ae1FBED41f011507CeAC3CfA5877e97",
 					token: o.TV[i.a_.ONE].usdt,
-					quoteToken: o.TV[i.a_.ONE].arbs,
+					quoteToken: o.TV[i.a_.ONE].bsmart,
 					stableSwapAddress: "0xE97Af01c48C0A332C06A92dF36b77B2A680AB54B",
 					infoStableSwapAddress: "0xaA50d30612A58f2e7935C4482Fa426B0Aa770d7f",
 					stableLpFee: 2e-4,
@@ -32344,8 +32344,7 @@
 				},
 				s = {
 					weth: new r.WU(42161, "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1", 18, "WETH", "Wrapped Ether", "https://weth.io/"),
-					usdt: new r.WU(42161, "0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1", 6, "USDT", "Tether USD", "https://tether.to/"),
-					usdt1: new r.WU(42161, "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9", 6, "USDT", "Tether USD", "https://tether.to/"),
+					usdt: new r.WU(42161, "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9", 6, "USDT", "Tether USD", "https://tether.to/"),
 					bsmart: new r.WU(42161, "0x3419875B4D3Bca7F3FddA2dB7a476A79fD31B4fE", 9, "BSMART", "Bitcoin Smart", "https://tether.to/"),
 					slinky: new r.WU(42161, "0xF832cA45a6316F0a4447b861f36De8FFa2B06D82", 6, "SLINKY", "Slinky Doge", ""),
 					arbs: new r.WU(42161, "0x750ba8b76187092B0D1E87E28daaf484d1b5273b", 6, "ARBS", "ARBS", "")
