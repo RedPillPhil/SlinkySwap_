@@ -25378,8 +25378,8 @@
 			! function(e) {
 				e[e.EXACT_INPUT = 0] = "EXACT_INPUT", e[e.EXACT_OUTPUT = 1] = "EXACT_OUTPUT"
 			}(xt || (xt = {}));
-			var Tt, _t, Ot, kt, Et = (wt(Tt = {}, gt.MAINNET, "0xf6239423FcF1c19ED2791D9648A90836074242Fd"), wt(Tt, gt.TESTNET, "0x7B2cde10ebd24D0C5399359Ffc708B44BBc1854e"), wt(Tt, gt.ONE, "0xd394e9cc20f43d2651293756f8d320668e850f1b"), Tt),
-				St = (wt(_t = {}, gt.MAINNET, "0x70b19cf85a176c6b86e2d324be179104bdc8fafee13d548ae07d28b9f53cbc71"), wt(_t, gt.TESTNET, "0x70b19cf85a176c6b86e2d324be179104bdc8fafee13d548ae07d28b9f53cbc71"), wt(_t, gt.ONE, "0x8336ef61546f16041265cbd61fb71f00434b515a1f3dba059227802ec4a4be4f"), _t),
+			var Tt, _t, Ot, kt, Et = (wt(Tt = {}, gt.MAINNET, "0xf6239423FcF1c19ED2791D9648A90836074242Fd"), wt(Tt, gt.TESTNET, "0x7B2cde10ebd24D0C5399359Ffc708B44BBc1854e"), wt(Tt, gt.ONE, "0xaE4EC9901c3076D0DdBe76A520F9E90a6227aCB7"), Tt),
+				St = (wt(_t = {}, gt.MAINNET, "0x70b19cf85a176c6b86e2d324be179104bdc8fafee13d548ae07d28b9f53cbc71"), wt(_t, gt.TESTNET, "0x70b19cf85a176c6b86e2d324be179104bdc8fafee13d548ae07d28b9f53cbc71"), wt(_t, gt.ONE, "0x5c9d12e487d245c53fb0b8dd1ba2ccc48810e6b9671311502b8632e88b0d605b"), _t),
 				At = i().BigInt(1e3),
 				Pt = i().BigInt(0),
 				Ct = i().BigInt(1),
