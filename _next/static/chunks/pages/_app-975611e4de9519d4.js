@@ -31917,7 +31917,7 @@
 			var r = {
 				421613: "0x81cD91B6BD7D275a7AeebBA15929AE0f0751d18C",
 				42170: "0xEe01c0CD76354C383B8c7B4e65EA88D00B06f36f",
-				42161: "0xbee5c10cf6e4f68f831e11c1d9e59b43560b3642"
+				42161: "0xb4315e873dbcf96ffd0acd8ea43f689d8c20fb30"
 			};
 			t.Z = {
 				masterChef: {
@@ -32177,7 +32177,7 @@
 					isFlexible: !0
 				}, {
 					pid: 0,
-					lpSymbol: "ARBS/ETH",
+					lpSymbol: "SLINKY/USDT",
 					lpAddress: "0x90a865d351E10a1C52Fdb620d1918eB6505B4CBF",
 					token: o.fi.slinky,
 					quoteToken: o.fi.usdt,
