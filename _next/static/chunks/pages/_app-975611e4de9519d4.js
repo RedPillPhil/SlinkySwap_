@@ -25347,7 +25347,7 @@
 				function a(e) {
 					return function(e, t) {
 						if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
-					}(this, a), i.call(this, e, 18, "BUTT", "Butthole")
+					}(this, a), i.call(this, e, 18, "ETH", "Ether")
 				}
 				return a.prototype.equals = function(e) {
 					return e.isNative && e.chainId === this.chainId
@@ -31917,7 +31917,7 @@
 			var r = {
 				421613: "0x81cD91B6BD7D275a7AeebBA15929AE0f0751d18C",
 				42170: "0xEe01c0CD76354C383B8c7B4e65EA88D00B06f36f",
-				42161: "0xb4315e873dbcf96ffd0acd8ea43f689d8c20fb30"
+				42161: "0xbee5c10cf6e4f68f831e11c1d9e59b43560b3642"
 			};
 			t.Z = {
 				masterChef: {
