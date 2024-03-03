@@ -32181,7 +32181,8 @@
 					lpAddress: "0x90a865d351E10a1C52Fdb620d1918eB6505B4CBF",
 					token: o.fi.slinky,
 					quoteToken: o.fi.usdt,
-					isStableLp: !1
+					isStableLp: !1,
+					isFlexible: !0
 				}, {
 					pid: 1,
 					lpSymbol: "ETH/USDC.e",
