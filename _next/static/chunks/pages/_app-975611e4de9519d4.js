@@ -25347,7 +25347,7 @@
 				function a(e) {
 					return function(e, t) {
 						if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
-					}(this, a), i.call(this, e, 18, "ETH", "Ether")
+					}(this, a), i.call(this, e, 18, "BUTT", "Butthole")
 				}
 				return a.prototype.equals = function(e) {
 					return e.isNative && e.chainId === this.chainId
