@@ -32334,7 +32334,6 @@
 					arbs: new r.WU(42170, "0xF832cA45a6316F0a4447b861f36De8FFa2B06D82", 6, "SLINKY", "Slinky Doge", "")
 				},
 				s = {
-					weth: new r.WU(42161, "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1", 18, "WETH", "Wrapped Ether", "https://weth.io/"),
 					usdt: new r.WU(42161, "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9", 6, "USDT", "Tether USD", "https://tether.to/"),
 					slinky: new r.WU(42161, "0xF832cA45a6316F0a4447b861f36De8FFa2B06D82", 6, "SLINKY", "Slinky Doge", ""),
 				},
