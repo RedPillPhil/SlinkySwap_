@@ -1031,9 +1031,9 @@
 			}
 
 			function tn() {
-				var e = en(["\n  background: url('/images/bg.png');\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-position: center;\n"]);
-				return tn = function() {
-					return e
+    		var e = en(["\n  background: url('/images/bg.png');\n  background-repeat: no-repeat;\n  background-size: 120%;\n  background-position: center;\n"]);
+    		return tn = function() {
+        		return e;
 				}, e
 			}
 			var rn = (0, i.ZP)(d.Z).withConfig({
@@ -4384,9 +4384,7 @@
 						return c("The input token cannot be transferred. There may be an issue with the input token.");
 					case "ArbSwap: TRANSFER_FAILED":
 						return c("The output token cannot be transferred. There may be an issue with the output token.");
-					default:
-						return -1 !== (null === n || void 0 === n ? void 0 : n.indexOf("undefined is not an object")) ? (console.error(e, n), "An error occurred when trying to execute this operation. You may need to increase your slippage tolerance. If that does not work, there may be an incompatibility with the token you are trading.") : "Unknown error ".concat(n ? ': "'.concat(n, '"') : "", ". Try increasing your slippage tolerance.")
-				}
+					}
 			}
 			t.d(n, {
 				e: function() {
