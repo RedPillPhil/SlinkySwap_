@@ -32176,12 +32176,6 @@
 					isStableLp: !0,
 					isFlexible: !0
 				}, {
-					pid: 0,
-					lpSymbol: "SLINKY/USDT",
-					lpAddress: "0x90a865d351E10a1C52Fdb620d1918eB6505B4CBF",
-					token: o.fi.slinky,
-					quoteToken: o.fi.usdt
-				}, {
 					pid: 1,
 					lpSymbol: "ETH/USDC.e",
 					lpAddress: "0x6e8aee8ed658fdcbbb7447743fdd98152b3453a0",
