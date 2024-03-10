@@ -2164,7 +2164,7 @@
 				var o, i, u, c = qt((0, a.w3)(e, n.allowedSlippage)),
 					s = qt((0, a.cP)(e, n.allowedSlippage)),
 					l = e.route.path.map((function(n, t) {
-						return 0 === t && e.inputAmount.currency.isNative || t === e.route.path.length - 1 && e.outputAmount.currency.isNative ? $t : n.isToken ? n.address : $t
+						return 0 === t && e.inputAmount.currency.isToken || t === e.route.path.length - 1 && e.outputAmount.currency.isToken ? $t : n.isToken ? n.address : $t
 					})),
 					d = e.route.pairs.map((function(e) {
 						return (null === e || void 0 === e ? void 0 : e.stableSwapAddress) ? "0x0" : "0x1"
