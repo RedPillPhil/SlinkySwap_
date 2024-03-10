@@ -2165,7 +2165,7 @@ function Gt(e, n) {
             return 0 === t && e.inputAmount.currency.isNative || t === e.route.path.length - 1 && e.outputAmount.currency.isNative ? $t : n.isToken ? n.address : $t
         })),
         d = e.route.pairs.map((function(e) {
-            return "0x1"
+            return "0x0"
         }));
     return 2 === l.length ? (o = "swap", i = [l[0], l[1], d[0]], u = t ? c : "0x0") : (o = "swapMulti", i = [l, d], u = t ? c : "0x0"), {
         methodName: o,
