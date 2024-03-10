@@ -32198,7 +32198,8 @@
 					stableSwapAddress: "0xbee5c10cf6e4f68f831e11c1d9e59b43560b3642",
 					token: o.fi.slinky,
 					quoteToken: o.fi.usdt,
-					isStableLp: !0
+					isStableLp: !0,
+					isFlexible:!0
 				}, {
 					pid: 3,
 					lpSymbol: "ARB/ETH",
