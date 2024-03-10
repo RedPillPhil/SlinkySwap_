@@ -2161,8 +2161,8 @@
 				var t = e.inputAmount.currency.isNative,
 					r = e.outputAmount.currency.isNative;
 				(0, _t.Z)(!(t && r), "ETHER_IN_OUT"), (0, _t.Z)(!("ttl" in n) || n.ttl > 0, "TTL");
-				var o, i, u, c = qt((0, a.w3)(e, n.allowedSlippage*20)),
-					s = qt((0, a.cP)(e, n.allowedSlippage*20)),
+				var o, i, u, c = qt((0, a.w3)(e, n.allowedSlippage)),
+					s = qt((0, a.cP)(e, n.allowedSlippage)),
 					l = e.route.path.map((function(n, t) {
 						return 0 === t && e.inputAmount.currency.isNative || t === e.route.path.length - 1 && e.outputAmount.currency.isNative ? $t : n.isToken ? n.address : $t
 					})),
