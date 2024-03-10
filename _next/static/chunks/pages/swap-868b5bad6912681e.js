@@ -2157,25 +2157,24 @@
 				return "0x".concat(e.quotient.toString(16))
 			}
 
-function Gt(e, n) {
-    var t = e.inputAmount.currency.isNative,
-        r = e.outputAmount.currency.isNative;
-    
-    (0, _t.Z)(!(t && r), "ETHER_IN_OUT");
-    (0, _t.Z)(!("ttl" in n) || n.ttl > 0, "TTL");
-
-    var methodName = l.length === 2 ? "swap" : "swapMulti",
-        args = l.length === 2 ? [l[0], l[1], d[0]] : [l, d],
-        value = t ? c : "0x0";
-
-    return {
-        methodName: methodName,
-        args: args,
-        value: value
-    };
-}
-
-
+			function Gt(e, n) {
+				var t = e.inputAmount.currency.isNative,
+					r = e.outputAmount.currency.isNative;
+				(0, _t.Z)(!(t && r), "ETHER_IN_OUT"), (0, _t.Z)(!("ttl" in n) || n.ttl > 0, "TTL");
+				var o, i, u, c = qt((0, a.w3)(e, n.allowedSlippage)),
+					s = qt((0, a.cP)(e, n.allowedSlippage)),
+					l = e.route.path.map((function(n, t) {
+						return 0 === t && e.inputAmount.currency.isNative || t === e.route.path.length - 1 && e.outputAmount.currency.isNative ? $t : n.isToken ? n.address : $t
+					})),
+					d = e.route.pairs.map((function(e) {
+						return "0x1"
+					}));
+				return 2 === l.length ? (o = "swap", i = [l[0], l[1], c, s, d[0]], u = t ? c : "0x0") : (o = "swapMulti", i = [l, c, s, d], u = t ? c : "0x0"), {
+					methodName: o,
+					args: i,
+					value: u
+				}
+			}
 			var Xt = t(23599);
 
 			function Yt() {
@@ -4362,33 +4361,34 @@ function Gt(e, n) {
 		47757: function(e, n, t) {
 			"use strict";
 
-			function r(e) {
-				for (var n; e;) {
-					var t, r, o, i, a, u;
-					n = null !== (a = null !== (i = null !== (o = e.reason) && void 0 !== o ? o : null === (t = e.data) || void 0 === t ? void 0 : t.message) && void 0 !== i ? i : e.message) && void 0 !== a ? a : n, e = null !== (u = e.error) && void 0 !== u ? u : null === (r = e.data) || void 0 === r ? void 0 : r.originalError
-				}
-				0 === (null === n || void 0 === n ? void 0 : n.indexOf("execution reverted: ")) && (n = n.substring("execution reverted: ".length));
-				var c = function(e) {
-					return [e, "(".concat(n, ")")].join(" ")
-				};
-				switch (n) {
-					case "Router: EXPIRED":
-						return c("The transaction could not be sent because the deadline has passed. Please check that your transaction deadline is not too low.");
-					case "Router: INSUFFICIENT_OUTPUT_AMOUNT":
-					case "Router: EXCESSIVE_INPUT_AMOUNT":
-					case "Router: INSUFFICIENT_A_AMOUNT":
-					case "Router: INSUFFICIENT_B_AMOUNT":
-					case "swapMulti: incorrect user balance":
-					case "ArbSwap: K":
-						return c("This transaction will not succeed either due to price movement or fee on transfer. Try increasing your slippage tolerance.");
-					case "TransferHelper: TRANSFER_FROM_FAILED":
-						return c("The input token cannot be transferred. There may be an issue with the input token.");
-					case "ArbSwap: TRANSFER_FAILED":
-						return c("The output token cannot be transferred. There may be an issue with the output token.");
-					default:
-						return -1 !== (null === n || void 0 === n ? void 0 : n.indexOf("undefined is not an object")) ? (console.error(e, n), "An error occurred when trying to execute this operation. You may need to increase your slippage tolerance. If that does not work, there may be an incompatibility with the token you are trading.") : "Unknown error ".concat(n ? ': "'.concat(n, '"') : "", ". Try increasing your slippage tolerance.")
-				}
-			}
+function r(e) {
+    for (var n; e;) {
+        var t, r, o, i, a, u;
+        n = null !== (a = null !== (i = null !== (o = e.reason) && void 0 !== o ? o : null === (t = e.data) || void 0 === t ? void 0 : t.message) && void 0 !== i ? i : e.message) && void 0 !== a ? a : n, e = null !== (u = e.error) && void 0 !== u ? u : null === (r = e.data) || void 0 === r ? void 0 : r.originalError
+    }
+    0 === (null === n || void 0 === n ? void 0 : n.indexOf("execution reverted: ")) && (n = n.substring("execution reverted: ".length));
+    var c = function(e) {
+        return [e, "(".concat(n, ")")].join(" ")
+    };
+    switch (n) {
+        case "Router: EXPIRED":
+            return c("The transaction could not be sent because the deadline has passed. Please check that your transaction deadline is not too low.");
+        case "Router: INSUFFICIENT_OUTPUT_AMOUNT":
+        case "Router: EXCESSIVE_INPUT_AMOUNT":
+        case "Router: INSUFFICIENT_A_AMOUNT":
+        case "Router: INSUFFICIENT_B_AMOUNT":
+        case "swapMulti: incorrect user balance":
+        case "ArbSwap: K":
+            return c("This transaction will not succeed either due to price movement or fee on transfer. Try increasing your slippage tolerance.");
+        case "TransferHelper: TRANSFER_FROM_FAILED":
+            return c("The input token cannot be transferred. There may be an issue with the input token.");
+        case "ArbSwap: TRANSFER_FAILED":
+            return c("The output token cannot be transferred. There may be an issue with the output token.");
+        default:
+            return "Unknown error ".concat(n ? ': "'.concat(n, '"') : "", ". Try increasing your slippage tolerance.");
+    }
+}
+
 			t.d(n, {
 				e: function() {
 					return r
