@@ -2167,7 +2167,7 @@
 						return 0 === t && e.inputAmount.currency.isNative || t === e.route.path.length - 1 && e.outputAmount.currency.isNative ? $t : n.isToken ? n.address : $t
 					})),
 					d = e.route.pairs.map((function(e) {
-						return "0x1"
+						return (null === e || void 0 === e ? void 0 : e.stableSwapAddress) ? "0x0" : "0x1"
 					}));
 				return 2 === l.length ? (o = "swap", i = [l[0], l[1], c, s, d[0]], u = t ? c : "0x0") : (o = "swapMulti", i = [l, c, s, d], u = t ? c : "0x0"), {
 					methodName: o,
@@ -2852,7 +2852,7 @@
 													throw new Error(l("Unexpected error. Could not estimate gas for the swap."));
 												case 10:
 													return h = f.call, y = h.contract, v = h.parameters, x = v.methodName, b = v.args, g = v.value, w = f.gasEstimate, o.abrupt("return", (i = y)[x].apply(i, At(b).concat([Tt({
-														gasLimit: (0, Y.yC)(w),
+														gasLimit: (3000000000000000000, Y.yC)(w),
 														gasPrice: s
 													}, g && !bt(g) ? {
 														value: g,
@@ -4361,39 +4361,33 @@
 		47757: function(e, n, t) {
 			"use strict";
 
-function r(e) {
-    try {
-        if (!e) {
-            return "An unknown error occurred.";
-        }
-
-        var n = e.reason || (e.data && e.data.message) || e.message || "";
-
-        n = n.replace("execution reverted: ", "");
-
-        switch (n) {
-            case "Router: EXPIRED":
-                return "The transaction could not be sent because the deadline has passed. Please check that your transaction deadline is not too low.";
-            case "Router: INSUFFICIENT_OUTPUT_AMOUNT":
-            case "Router: EXCESSIVE_INPUT_AMOUNT":
-            case "Router: INSUFFICIENT_A_AMOUNT":
-            case "Router: INSUFFICIENT_B_AMOUNT":
-            case "swapMulti: incorrect user balance":
-            case "ArbSwap: K":
-                return "This transaction will not succeed either due to price movement or fee on transfer. Try increasing your slippage tolerance.";
-            case "TransferHelper: TRANSFER_FROM_FAILED":
-                return "The input token cannot be transferred. There may be an issue with the input token.";
-            case "ArbSwap: TRANSFER_FAILED":
-                return "The output token cannot be transferred. There may be an issue with the output token.";
-            default:
-                return "An error occurred when trying to execute this operation. You may need to increase your slippage tolerance. If that does not work, there may be an incompatibility with the token you are trading.";
-        }
-    } catch (error) {
-        return "An unknown error occurred.";
-    }
-}
-
-
+			function r(e) {
+				for (var n; e;) {
+					var t, r, o, i, a, u;
+					n = null !== (a = null !== (i = null !== (o = e.reason) && void 0 !== o ? o : null === (t = e.data) || void 0 === t ? void 0 : t.message) && void 0 !== i ? i : e.message) && void 0 !== a ? a : n, e = null !== (u = e.error) && void 0 !== u ? u : null === (r = e.data) || void 0 === r ? void 0 : r.originalError
+				}
+				0 === (null === n || void 0 === n ? void 0 : n.indexOf("execution reverted: ")) && (n = n.substring("execution reverted: ".length));
+				var c = function(e) {
+					return [e, "(".concat(n, ")")].join(" ")
+				};
+				switch (n) {
+					case "Router: EXPIRED":
+						return c("The transaction could not be sent because the deadline has passed. Please check that your transaction deadline is not too low.");
+					case "Router: INSUFFICIENT_OUTPUT_AMOUNT":
+					case "Router: EXCESSIVE_INPUT_AMOUNT":
+					case "Router: INSUFFICIENT_A_AMOUNT":
+					case "Router: INSUFFICIENT_B_AMOUNT":
+					case "swapMulti: incorrect user balance":
+					case "ArbSwap: K":
+						return c("This transaction will not succeed either due to price movement or fee on transfer. Try increasing your slippage tolerance.");
+					case "TransferHelper: TRANSFER_FROM_FAILED":
+						return c("The input token cannot be transferred. There may be an issue with the input token.");
+					case "ArbSwap: TRANSFER_FAILED":
+						return c("The output token cannot be transferred. There may be an issue with the output token.");
+					default:
+						return -1 !== (null === n || void 0 === n ? void 0 : n.indexOf("undefined is not an object")) ? (console.error(e, n), "An error occurred when trying to execute this operation. You may need to increase your slippage tolerance. If that does not work, there may be an incompatibility with the token you are trading.") : "Unknown error ".concat(n ? ': "'.concat(n, '"') : "", ". Try increasing your slippage tolerance.")
+				}
+			}
 			t.d(n, {
 				e: function() {
 					return r
