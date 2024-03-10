@@ -4362,32 +4362,37 @@
 			"use strict";
 
 function r(e) {
-    for (var n; e;) {
-        var t, r, o, i, a, u;
-        n = null !== (a = null !== (i = null !== (o = e.reason) && void 0 !== o ? o : null === (t = e.data) || void 0 === t ? void 0 : t.message) && void 0 !== i ? i : e.message) && void 0 !== a ? a : n, e = null !== (u = e.error) && void 0 !== u ? u : null === (r = e.data) || void 0 === r ? void 0 : r.originalError
-    }
-    0 === (null === n || void 0 === n ? void 0 : n.indexOf("execution reverted: ")) && (n = n.substring("execution reverted: ".length));
-    var c = function(e) {
-        return [e, "(".concat(n, ")")].join(" ")
-    };
-    switch (n) {
-        case "Router: EXPIRED":
-            return c("The transaction could not be sent because the deadline has passed. Please check that your transaction deadline is not too low.");
-        case "Router: INSUFFICIENT_OUTPUT_AMOUNT":
-        case "Router: EXCESSIVE_INPUT_AMOUNT":
-        case "Router: INSUFFICIENT_A_AMOUNT":
-        case "Router: INSUFFICIENT_B_AMOUNT":
-        case "swapMulti: incorrect user balance":
-        case "ArbSwap: K":
-            return c("This transaction will not succeed either due to price movement or fee on transfer. Try increasing your slippage tolerance.");
-        case "TransferHelper: TRANSFER_FROM_FAILED":
-            return c("The input token cannot be transferred. There may be an issue with the input token.");
-        case "ArbSwap: TRANSFER_FAILED":
-            return c("The output token cannot be transferred. There may be an issue with the output token.");
-        default:
-            return "Unknown error ".concat(n ? ': "'.concat(n, '"') : "", ". Try increasing your slippage tolerance.");
+    try {
+        if (!e) {
+            return "An unknown error occurred.";
+        }
+
+        var n = e.reason || (e.data && e.data.message) || e.message || "";
+
+        n = n.replace("execution reverted: ", "");
+
+        switch (n) {
+            case "Router: EXPIRED":
+                return "The transaction could not be sent because the deadline has passed. Please check that your transaction deadline is not too low.";
+            case "Router: INSUFFICIENT_OUTPUT_AMOUNT":
+            case "Router: EXCESSIVE_INPUT_AMOUNT":
+            case "Router: INSUFFICIENT_A_AMOUNT":
+            case "Router: INSUFFICIENT_B_AMOUNT":
+            case "swapMulti: incorrect user balance":
+            case "ArbSwap: K":
+                return "This transaction will not succeed either due to price movement or fee on transfer. Try increasing your slippage tolerance.";
+            case "TransferHelper: TRANSFER_FROM_FAILED":
+                return "The input token cannot be transferred. There may be an issue with the input token.";
+            case "ArbSwap: TRANSFER_FAILED":
+                return "The output token cannot be transferred. There may be an issue with the output token.";
+            default:
+                return "An error occurred when trying to execute this operation. You may need to increase your slippage tolerance. If that does not work, there may be an incompatibility with the token you are trading.";
+        }
+    } catch (error) {
+        return "An unknown error occurred.";
     }
 }
+
 
 			t.d(n, {
 				e: function() {
