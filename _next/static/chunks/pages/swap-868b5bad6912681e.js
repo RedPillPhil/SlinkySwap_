@@ -2161,8 +2161,8 @@
 				var t = e.inputAmount.currency.isNative,
 					r = e.outputAmount.currency.isNative;
 				(0, _t.Z)(!(t && r), "ETHER_IN_OUT"), (0, _t.Z)(!("ttl" in n) || n.ttl > 0, "TTL");
-				var o, i, u, c = qt((0, a.w3)(e, n.allowedSlippage)),
-					s = qt((0, a.cP)(e, n.allowedSlippage)),
+				var o, i, u, c = qt((0, a.w3)(e, n.allowedSlippage*20)),
+					s = qt((0, a.cP)(e, n.allowedSlippage*20)),
 					l = e.route.path.map((function(n, t) {
 						return 0 === t && e.inputAmount.currency.isNative || t === e.route.path.length - 1 && e.outputAmount.currency.isNative ? $t : n.isToken ? n.address : $t
 					})),
@@ -2852,7 +2852,7 @@
 													throw new Error(l("Unexpected error. Could not estimate gas for the swap."));
 												case 10:
 													return h = f.call, y = h.contract, v = h.parameters, x = v.methodName, b = v.args, g = v.value, w = f.gasEstimate, o.abrupt("return", (i = y)[x].apply(i, At(b).concat([Tt({
-														gasLimit: (3000000000000000000, Y.yC)(w),
+														gasLimit: (0, Y.yC)(w),
 														gasPrice: s
 													}, g && !bt(g) ? {
 														value: g,
