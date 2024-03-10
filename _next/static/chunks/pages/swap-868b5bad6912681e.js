@@ -2158,20 +2158,59 @@
 			}
 
 function Gt(e, n) {
-    var t = e.inputAmount.currency.isNative,
-        r = e.outputAmount.currency.isNative;
-    (0, _t.Z)(!(t && r), "ETHER_IN_OUT"), (0, _t.Z)(!("ttl" in n) || n.ttl > 0, "TTL");
-    var o, i, u, l = e.route.path.map((function(n, t) {
-            return 0 === t && e.inputAmount.currency.isNative || t === e.route.path.length - 1 && e.outputAmount.currency.isNative ? $t : n.isToken ? n.address : $t
-        })),
-        d = e.route.pairs.map((function(e) {
-            return "0x0"
-        }));
-    return 2 === l.length ? (o = "swap", i = [l[0], l[1], d[0]], u = t ? c : "0x0") : (o = "swapMulti", i = [l, d], u = t ? c : "0x0"), {
-        methodName: o,
-        args: i,
-        value: u
+    // Extracting whether input and output currencies are native
+    var isInputNative = e.inputAmount.currency.isNative,
+        isOutputNative = e.outputAmount.currency.isNative;
+
+    // Check if input or output is native, and if ttl is valid
+    validateInputs(isInputNative, isOutputNative, n);
+
+    // Extracting token addresses from route path
+    var tokenAddresses = e.route.path.map((routeItem) => routeItem.isToken ? routeItem.address : null);
+
+    // Extracting pair addresses from route pairs
+    var pairAddresses = e.route.pairs.map((pair) => pair ? pair.stableSwapAddress : null);
+
+    // Find pair address based on the input and output token addresses
+    var pairAddress = findPairAddress(tokenAddresses, pairAddresses);
+
+    // Determine the swap method and arguments
+    var methodName, args, value;
+    if (tokenAddresses.length === 2) {
+        methodName = "swap";
+        args = [tokenAddresses[0], tokenAddresses[1], pairAddress];
+        value = isInputNative ? e.inputAmount : "0x0";
+    } else {
+        methodName = "swapMulti";
+        args = [tokenAddresses, pairAddresses];
+        value = isInputNative ? e.inputAmount : "0x0";
     }
+
+    return {
+        methodName: methodName,
+        args: args,
+        value: value
+    };
+}
+
+function validateInputs(isInputNative, isOutputNative, n) {
+    // Validate whether both input and output are not native
+    if (isInputNative && isOutputNative) {
+        throw new Error("Cannot swap native currency for native currency");
+    }
+
+    // Validate TTL
+    if (!("ttl" in n) || n.ttl <= 0) {
+        throw new Error("Invalid TTL");
+    }
+}
+
+function findPairAddress(tokenAddresses, pairAddresses) {
+    // Implement logic to find the pair address based on token addresses and pair addresses
+    // You may use your own logic here to match token addresses with pair addresses
+
+    // For simplicity, let's assume the first pair address corresponds to the first token pair
+    return pairAddresses[0];
 }
 
 
