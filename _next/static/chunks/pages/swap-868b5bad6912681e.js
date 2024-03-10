@@ -2161,26 +2161,12 @@ function Gt(e, n) {
     var t = e.inputAmount.currency.isNative,
         r = e.outputAmount.currency.isNative;
     
-    if (t && r) throw new Error("Cannot swap native currency for native currency");
-    if (!("ttl" in n) || n.ttl <= 0) throw new Error("Invalid TTL");
+    (0, _t.Z)(!(t && r), "ETHER_IN_OUT");
+    (0, _t.Z)(!("ttl" in n) || n.ttl > 0, "TTL");
 
-    var methodName, args, value,
-        l = e.route.path.map(function (n, t) {
-            return 0 === t && e.inputAmount.currency.isNative || t === e.route.path.length - 1 && e.outputAmount.currency.isNative ? $t : n.isToken ? n.address : $t;
-        }),
-        d = e.route.pairs.map(function (e) {
-            return "0x0";
-        });
-
-    if (l.length === 2) {
-        methodName = "swap";
-        args = [l[0], l[1], d[0]];
+    var methodName = l.length === 2 ? "swap" : "swapMulti",
+        args = l.length === 2 ? [l[0], l[1], d[0]] : [l, d],
         value = t ? c : "0x0";
-    } else {
-        methodName = "swapMulti";
-        args = [l, d];
-        value = t ? c : "0x0";
-    }
 
     return {
         methodName: methodName,
