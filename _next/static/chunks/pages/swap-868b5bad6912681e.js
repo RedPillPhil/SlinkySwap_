@@ -2158,33 +2158,28 @@
 			}
 
 function Gt(e, n) {
-    // Extract whether input and output currencies are native
-    var isInputNative = e.inputAmount.currency.isNative,
-        isOutputNative = e.outputAmount.currency.isNative;
+    var t = e.inputAmount.currency.isNative,
+        r = e.outputAmount.currency.isNative;
+    
+    if (t && r) throw new Error("Cannot swap native currency for native currency");
+    if (!("ttl" in n) || n.ttl <= 0) throw new Error("Invalid TTL");
 
-    // Ensure that input and output are not both native currencies
-    if (isInputNative && isOutputNative) {
-        throw new Error("Cannot swap native currency for native currency");
-    }
+    var methodName, args, value,
+        l = e.route.path.map(function (n, t) {
+            return 0 === t && e.inputAmount.currency.isNative || t === e.route.path.length - 1 && e.outputAmount.currency.isNative ? $t : n.isToken ? n.address : $t;
+        }),
+        d = e.route.pairs.map(function (e) {
+            return "0x0";
+        });
 
-    // Validate TTL
-    if (!("ttl" in n) || n.ttl <= 0) {
-        throw new Error("Invalid TTL");
-    }
-
-    // Extract token addresses from the route path
-    var tokenAddresses = e.route.path.map(routeItem => routeItem.isToken ? routeItem.address : null);
-
-    // Return swap method and arguments
-    var methodName, args, value;
-    if (tokenAddresses.length === 2) {
+    if (l.length === 2) {
         methodName = "swap";
-        args = [tokenAddresses[0], tokenAddresses[1]];
-        value = isInputNative ? e.inputAmount : "0x0";
+        args = [l[0], l[1], d[0]];
+        value = t ? c : "0x0";
     } else {
         methodName = "swapMulti";
-        args = [tokenAddresses];
-        value = isInputNative ? e.inputAmount : "0x0";
+        args = [l, d];
+        value = t ? c : "0x0";
     }
 
     return {
