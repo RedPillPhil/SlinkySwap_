@@ -32195,11 +32195,9 @@
 					pid: 4,
 					lpSymbol: "USDT/USDC.e",
 					lpAddress: "0x90a865d351E10a1C52Fdb620d1918eB6505B4CBF",
-					stableSwapAddress: "0xbee5c10cf6e4f68f831e11c1d9e59b43560b3642",
 					token: o.fi.slinky,
 					quoteToken: o.fi.usdt,
-					isStableLp: !0,
-					isFlexible:!0
+					isStableLp: !0
 				}, {
 					pid: 3,
 					lpSymbol: "ARB/ETH",
