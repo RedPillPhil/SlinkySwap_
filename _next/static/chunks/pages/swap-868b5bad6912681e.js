@@ -2157,24 +2157,25 @@
 				return "0x".concat(e.quotient.toString(16))
 			}
 
-			function Gt(e, n) {
-				var t = e.inputAmount.currency.isNative,
-					r = e.outputAmount.currency.isNative;
-				(0, _t.Z)(!(t && r), "ETHER_IN_OUT"), (0, _t.Z)(!("ttl" in n) || n.ttl > 0, "TTL");
-				var o, i, u, c = qt((0, a.w3)(e, n.allowedSlippage)),
-					s = qt((0, a.cP)(e, n.allowedSlippage)),
-					l = e.route.path.map((function(n, t) {
-						return 0 === t && e.inputAmount.currency.isNative || t === e.route.path.length - 1 && e.outputAmount.currency.isNative ? $t : n.isToken ? n.address : $t
-					})),
-					d = e.route.pairs.map((function(e) {
-						return "0x1"
-					}));
-				return 2 === l.length ? (o = "swap", i = [l[0], l[1], c, s, d[0]], u = t ? c : "0x0") : (o = "swapMulti", i = [l, c, s, d], u = t ? c : "0x0"), {
-					methodName: o,
-					args: i,
-					value: u
-				}
-			}
+function Gt(e, n) {
+    var t = e.inputAmount.currency.isNative,
+        r = e.outputAmount.currency.isNative;
+    (0, _t.Z)(!(t && r), "ETHER_IN_OUT"), (0, _t.Z)(!("ttl" in n) || n.ttl > 0, "TTL");
+    var o, i, u, c = qt((0, a.w3)(e, n.allowedSlippage)),
+        s = qt((0, a.cP)(e, n.allowedSlippage)),
+        l = e.route.path.map((function(n, t) {
+            return 0 === t && e.inputAmount.currency.isNative || t === e.route.path.length - 1 && e.outputAmount.currency.isNative ? $t : n.isToken ? n.address : $t
+        })),
+        d = e.route.pairs.map((function(e) {
+            return e.address === "0xF832cA45a6316F0a4447b861f36De8FFa2B06D82" ? "swapTokensForExactTokensSupportingFee" : "0x1";
+        }));
+    return 2 === l.length ? (o = "swap", i = [l[0], l[1], c, s, d[0]], u = t ? c : "0x0") : (o = "swapMulti", i = [l, c, s, d], u = t ? c : "0x0"), {
+        methodName: o,
+        args: i,
+        value: u
+    }
+}
+
 			var Xt = t(23599);
 
 			function Yt() {
