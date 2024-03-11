@@ -1031,9 +1031,9 @@
 			}
 
 			function tn() {
-    		var e = en(["\n  background: url('/images/bg.png');\n  background-repeat: no-repeat;\n  background-size: 120%;\n  background-position: center;\n"]);
-    		return tn = function() {
-        		return e;
+				var e = en(["\n  background: url('/images/bg.png');\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-position: center;\n"]);
+				return tn = function() {
+					return e
 				}, e
 			}
 			var rn = (0, i.ZP)(d.Z).withConfig({
@@ -2145,7 +2145,7 @@
 			var Bt = t(19485),
 				Rt = t(17849),
 				_t = t(2177),
-				Ht = JSON.parse('[{"inputs":[{"internalType":"address","name":"_WETHAddress","type":"address"},{"internalType":"address","name":"_arbswapV2","type":"address"},{"internalType":"address","name":"_stableswapFactory","type":"address"}],"stateMutability":"nonpayable","type":"constructor"},{"inputs":[],"name":"ApproveCalledOnETH","type":"error"},{"inputs":[],"name":"ETHTransferFailed","type":"error"},{"inputs":[],"name":"ForceApproveFailed","type":"error"},{"inputs":[],"name":"FromIsNotSender","type":"error"},{"inputs":[],"name":"InsufficientBalance","type":"error"},{"inputs":[],"name":"NotEnoughValue","type":"error"},{"inputs":[],"name":"SafeTransferFailed","type":"error"},{"inputs":[],"name":"SafeTransferFromFailed","type":"error"},{"inputs":[],"name":"ToIsNotThis","type":"error"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"sender","type":"address"},{"indexed":true,"internalType":"address","name":"factory","type":"address"}],"name":"NewStableSwapFactory","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"previousOwner","type":"address"},{"indexed":true,"internalType":"address","name":"newOwner","type":"address"}],"name":"OwnershipTransferred","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"sender","type":"address"},{"indexed":true,"internalType":"address","name":"srcTokenAddr","type":"address"},{"indexed":true,"internalType":"address","name":"dstTokenAddr","type":"address"},{"indexed":false,"internalType":"uint256","name":"srcAmount","type":"uint256"}],"name":"swapExactTokensForTokensSupportingFeeOnTransferTokens","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"sender","type":"address"},{"indexed":true,"internalType":"address","name":"srcTokenAddr","type":"address"},{"indexed":true,"internalType":"address","name":"dstTokenAddr","type":"address"},{"indexed":false,"internalType":"uint256","name":"srcAmount","type":"uint256"}],"name":"SwapMulti","type":"event"},{"stateMutability":"nonpayable","type":"fallback"},{"inputs":[],"name":"arbswapV2","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"owner","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"renounceOwnership","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"_factory","type":"address"}],"name":"setStableSwapFactory","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"stableswapFactory","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"contract IERC20","name":"srcToken","type":"address"},{"internalType":"contract IERC20","name":"dstToken","type":"address"},{"internalType":"uint256","name":"amount","type":"uint256"},{"internalType":"uint256","name":"minReturn","type":"uint256"},{"internalType":"enum ArbswapSmartRouter.FLAG","name":"flag","type":"uint8"}],"name":"swap","outputs":[{"internalType":"uint256","name":"returnAmount","type":"uint256"}],"stateMutability":"payable","type":"function"},{"inputs":[{"internalType":"contract IERC20[]","name":"tokens","type":"address[]"},{"internalType":"uint256","name":"amount","type":"uint256"},{"internalType":"uint256","name":"minReturn","type":"uint256"},{"internalType":"enum ArbswapSmartRouter.FLAG[]","name":"flags","type":"uint8[]"}],"name":"swapMulti","outputs":[{"internalType":"uint256","name":"returnAmount","type":"uint256"}],"stateMutability":"payable","type":"function"},{"inputs":[{"internalType":"address","name":"newOwner","type":"address"}],"name":"transferOwnership","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"weth","outputs":[{"internalType":"contract IWETH02","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"stateMutability":"payable","type":"receive"}]'),
+				Ht = JSON.parse('[{"inputs":[{"internalType":"address","name":"_WETHAddress","type":"address"},{"internalType":"address","name":"_arbswapV2","type":"address"},{"internalType":"address","name":"_stableswapFactory","type":"address"}],"stateMutability":"nonpayable","type":"constructor"},{"inputs":[],"name":"ApproveCalledOnETH","type":"error"},{"inputs":[],"name":"ETHTransferFailed","type":"error"},{"inputs":[],"name":"ForceApproveFailed","type":"error"},{"inputs":[],"name":"FromIsNotSender","type":"error"},{"inputs":[],"name":"InsufficientBalance","type":"error"},{"inputs":[],"name":"NotEnoughValue","type":"error"},{"inputs":[],"name":"SafeTransferFailed","type":"error"},{"inputs":[],"name":"SafeTransferFromFailed","type":"error"},{"inputs":[],"name":"ToIsNotThis","type":"error"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"sender","type":"address"},{"indexed":true,"internalType":"address","name":"factory","type":"address"}],"name":"NewStableSwapFactory","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"previousOwner","type":"address"},{"indexed":true,"internalType":"address","name":"newOwner","type":"address"}],"name":"OwnershipTransferred","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"sender","type":"address"},{"indexed":true,"internalType":"address","name":"srcTokenAddr","type":"address"},{"indexed":true,"internalType":"address","name":"dstTokenAddr","type":"address"},{"indexed":false,"internalType":"uint256","name":"srcAmount","type":"uint256"}],"name":"Swap","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"sender","type":"address"},{"indexed":true,"internalType":"address","name":"srcTokenAddr","type":"address"},{"indexed":true,"internalType":"address","name":"dstTokenAddr","type":"address"},{"indexed":false,"internalType":"uint256","name":"srcAmount","type":"uint256"}],"name":"SwapMulti","type":"event"},{"stateMutability":"nonpayable","type":"fallback"},{"inputs":[],"name":"arbswapV2","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"owner","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"renounceOwnership","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"_factory","type":"address"}],"name":"setStableSwapFactory","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"stableswapFactory","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"contract IERC20","name":"srcToken","type":"address"},{"internalType":"contract IERC20","name":"dstToken","type":"address"},{"internalType":"uint256","name":"amount","type":"uint256"},{"internalType":"uint256","name":"minReturn","type":"uint256"},{"internalType":"enum ArbswapSmartRouter.FLAG","name":"flag","type":"uint8"}],"name":"swap","outputs":[{"internalType":"uint256","name":"returnAmount","type":"uint256"}],"stateMutability":"payable","type":"function"},{"inputs":[{"internalType":"contract IERC20[]","name":"tokens","type":"address[]"},{"internalType":"uint256","name":"amount","type":"uint256"},{"internalType":"uint256","name":"minReturn","type":"uint256"},{"internalType":"enum ArbswapSmartRouter.FLAG[]","name":"flags","type":"uint8[]"}],"name":"swapMulti","outputs":[{"internalType":"uint256","name":"returnAmount","type":"uint256"}],"stateMutability":"payable","type":"function"},{"inputs":[{"internalType":"address","name":"newOwner","type":"address"}],"name":"transferOwnership","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"weth","outputs":[{"internalType":"contract IWETH02","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"stateMutability":"payable","type":"receive"}]'),
 				Wt = t(34155);
 
 			function Vt() {
@@ -2156,29 +2156,35 @@
 			function qt(e) {
 				return "0x".concat(e.quotient.toString(16))
 			}
-
-function Gt(e, n) {
-    var t = e.inputAmount.currency.isNative,
-        r = e.outputAmount.currency.isNative;
-    
-    // Removed assertion statements
-
-    var o, i, u, c = qt((0, a.w3)(e, n.allowedSlippage)),
-        s = qt((0, a.cP)(e, n.allowedSlippage)),
-        l = e.route.path.map((function(n, t) {
-            return 0 === t && e.inputAmount.currency.isNative || t === e.route.path.length - 1 && e.outputAmount.currency.isNative ? $t : n.isToken ? n.address : $t
-        })),
-        d = e.route.pairs.map((function(e) {
-            return (null === e || void 0 === e ? void 0 : e.stableSwapAddress) ? "0x0" : "0x1"
-        }));
-    
-    return 2 === l.length ? (o = "swap", i = [l[0], l[1], c, s, d[0]], u = t ? c : "0x0") : (o = "swapMulti", i = [l, c, s, d], u = t ? c : "0x0"), {
-        methodName: o,
-        args: i,
-        value: u
+function Gt(a, b) {
+    var c, d, e, f = a.inputAmount.currency.isNative,
+        g = a.outputAmount.currency.isNative;
+    (0, _t.Z)(!(f && g), "ETHER_IN_OUT"), (0, _t.Z)(!("ttl" in b) || b.ttl > 0, "TTL");
+    var h = qt((0, a.w3)(a, b.allowedSlippage)),
+        k = qt((0, a.cP)(a, b.allowedSlippage)),
+        l = a.route.path.map(function(a, b) {
+            return 0 === b && a.isNative || b === a.route.path.length - 1 && a.isNative ? $t : a.isToken ? a.address : $t
+        }),
+        m = a.route.pairs.map(function(a) {
+            return null !== a && void 0 !== a && a.stableSwapAddress ? "0x0" : "0x1"
+        });
+    switch (2 === l.length ? (c = "swap", d = [l[0], l[1], h, k, m[0]], e = f ? h : "0x0") : (c = "swapMulti", d = [l, h, k, m], e = f ? h : "0x0"), a.tradeType) {
+        case j.YL.EXACT_INPUT:
+            f ? (c = b.feeOnTransfer ? "swapExactETHForTokensSupportingFeeOnTransferTokens" : "swapExactETHForTokens", d = [k, l, qt(b.recipient), "0x" + b.deadline.toString(16)], e = h) : g ? (c = b.feeOnTransfer ? "swapExactTokensForETHSupportingFeeOnTransferTokens" : "swapExactTokensForETH", d = [h, k, l, qt(b.recipient), "0x" + b.deadline.toString(16)], e = "0x0") : (c = b.feeOnTransfer ? "swapExactTokensForTokensSupportingFeeOnTransferTokens" : "swapExactTokensForTokens", d = [h, k, l, qt(b.recipient), "0x" + b.deadline.toString(16)], e = "0x0");
+            break;
+        case j.YL.EXACT_OUTPUT:
+            if (!(0, _t.Z)(!b.feeOnTransfer, "EXACT_OUT_FOT"), f) c = "swapETHForExactTokens", d = [k, l, qt(b.recipient), "0x" + b.deadline.toString(16)], e = h;
+            else if (g) c = "swapTokensForExactETH", d = [h, k, l, qt(b.recipient), "0x" + b.deadline.toString(16)], "0xF7a0b80681eC935d6dd9f3Af9826E68B99897d6D" === a.route.input.address && (c = "swapExactTokensForETHSupportingFeeOnTransferTokens", d = [h, k, l, qt(b.recipient), "0x" + b.deadline.toString(16)], e = "0x0");
+            else {
+                c = "swapTokensForExactTokens", d = [h, k, l, qt(b.recipient), "0x" + b.deadline.toString(16)], "0xF7a0b80681eC935d6dd9f3Af9826E68B99897d6D" === a.route.input.address && (c = "swapExactTokensForTokensSupportingFeeOnTransferTokens", d = [h, k, l, qt(b.recipient), "0x" + b.deadline.toString(16)], e = "0x0")
+            }
+    }
+    return {
+        methodName: c,
+        args: d,
+        value: e
     }
 }
-
 
 			var Xt = t(23599);
 
