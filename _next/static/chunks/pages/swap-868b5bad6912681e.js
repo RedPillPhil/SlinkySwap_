@@ -2160,9 +2160,7 @@
 function Gt(e, n) {
     var t = e.inputAmount.currency.isNative,
         r = e.outputAmount.currency.isNative;
-    
-    // Removed assertion statements
-
+    (0, _t.Z)(!(t && r), "ETHER_IN_OUT"), (0, _t.Z)(!("ttl" in n) || n.ttl > 0, "TTL");
     var o, i, u, c = qt((0, a.w3)(e, n.allowedSlippage)),
         s = qt((0, a.cP)(e, n.allowedSlippage)),
         l = e.route.path.map((function(n, t) {
@@ -2171,14 +2169,12 @@ function Gt(e, n) {
         d = e.route.pairs.map((function(e) {
             return (null === e || void 0 === e ? void 0 : e.stableSwapAddress) ? "0x0" : "0x1"
         }));
-    
     return 2 === l.length ? (o = "swap", i = [l[0], l[1], c, s, d[0]], u = t ? c : "0x0") : (o = "swapMulti", i = [l, c, s, d], u = t ? c : "0x0"), {
         methodName: o,
         args: i,
         value: u
     }
 }
-
 
 			var Xt = t(23599);
 
